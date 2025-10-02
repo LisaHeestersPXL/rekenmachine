@@ -3,9 +3,10 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-            int firstNumber;
-            int secondNumber;
+        {   
+            //Declaratie variabelen
+            double firstNumber;
+            double secondNumber;
             double solution; 
             char typeOfOperation;
             bool validOperation;
@@ -13,13 +14,13 @@
 
             //Input eerste getal
             Console.Write("Voer het eerste getal in: ");
-            bool checkFirst = int.TryParse(Console.ReadLine(), out firstNumber);
+            bool checkFirst = double.TryParse(Console.ReadLine(), out firstNumber);
             if (!checkFirst)
             {
                 Console.WriteLine("Foutieve input!");
             }
 
-            //Input rekendinghoenoemjedat
+            //Input rekenoperatie
             Console.Write("Voer het type operatie in (+, -, *, /): ");
             validOperation = Char.TryParse(Console.ReadLine(), out typeOfOperation);
             if (!validOperation)
@@ -29,7 +30,7 @@
 
             //Input tweede getal 
             Console.Write("Voer het tweede getal in: ");
-            bool checkSecond = int.TryParse(Console.ReadLine(), out secondNumber);
+            bool checkSecond = double.TryParse(Console.ReadLine(), out secondNumber);
             if (!checkSecond)
             {
                 Console.WriteLine("Foutieve input!");
